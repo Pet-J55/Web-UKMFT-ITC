@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@source "../views/**/*.blade.php";
+@source "../js/**/*.js";
+@source "../../routes/**/*.php";
+
+:root {
+    --ukm-primary-dark: #0d3f89;
+    --ukm-primary: #0865e2;
+    --ukm-primary-light: #4b8df1;
+    --ukm-cyan: #8eeeff;
+    --ukm-surface-blue: #d9f1ff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
