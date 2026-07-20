@@ -1,9 +1,9 @@
-<header class="absolute inset-x-0 top-0 z-50 px-3 pt-6">
+<header class="absolute inset-x-0 top-0 z-50 px-7 pt-7">
     <nav
-        class="relative mx-auto flex h-[48px] w-full max-w-[1320px]
+        class="relative mx-auto flex h-[58px] w-full max-w-[1320px]
                items-center rounded-full
                bg-gradient-to-r from-[#365b91] to-[#347bea]
-               px-5
+               px-7
                shadow-[0_6px_14px_rgba(30,64,175,0.22)]"
         aria-label="Navigasi utama"
     >
@@ -15,15 +15,15 @@
             <img
                 src="{{ asset('images/logo-itc.png') }}"
                 alt="Logo UKM FT ITC"
-                class="h-8 w-8 object-contain"
+                class="h-9 w-9 object-contain"
             >
         </a>
 
         {{-- Navigasi desktop --}}
         <div
             class="absolute left-1/2 hidden -translate-x-1/2
-                   items-center gap-12 whitespace-nowrap
-                   text-[13px] font-semibold text-white md:flex"
+                   items-center gap-14 whitespace-nowrap
+                   text-[16px] font-semibold text-white md:flex"
         >
             <a
                 href="#beranda"
