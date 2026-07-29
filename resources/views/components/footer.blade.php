@@ -1,60 +1,149 @@
-<footer id="kontak" class="bg-[#020b2d] text-white pt-16 pb-6 relative overflow-hidden">
-    <!-- Dekorasi Background (Wavy lines dsb bisa pakai image background) -->
+<footer id="kontak" class="relative pt-20 pb-8 bg-gradient-to-b from-[#00011C] via-[#01054a] to-[#02088A] text-white overflow-hidden">
     
-    <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-3 gap-12">
-        <!-- Kolom 1: Profil -->
-        <div class="space-y-4">
-            <div class="flex items-center gap-3 mb-6">
-                <img src="{{ asset('images/logo-itc.png') }}" alt="Logo ITC" class="w-16">
+    <!-- Top Black Gradient Transition -->
+    <div class="absolute top-0 inset-x-0 h-28 bg-gradient-to-b from-black via-[#00011C]/80 to-transparent z-10 pointer-events-none"></div>
+
+    <!-- Background Footer Image -->
+    <img 
+        src="{{ asset('assets/images/background-footer.png') }}" 
+        alt="Background Footer" 
+        class="absolute inset-0 w-full h-full object-cover object-bottom pointer-events-none z-0 opacity-80 mix-blend-screen" 
+    />
+
+    <div class="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 pt-8">
+        
+        <!-- Kolom 1: Profil (UKM FT ITC) - Balanced Logo & Text -->
+        <div class="lg:col-span-6 flex flex-col sm:flex-row items-start gap-5 sm:gap-6">
+            
+            <!-- Logo di sebelah kiri -->
+            <img src="{{ asset('images/logo-itc.png') }}" alt="Logo UKM FT ITC" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain shrink-0 drop-shadow-xl mt-0.5">
+
+            <!-- Container Teks & Sosial Media di sebelah kanan Logo -->
+            <div class="flex-1 space-y-4">
                 <div>
-                    <h3 class="text-xl font-bold">UKM FT ITC</h3>
-                    <p class="text-sm text-blue-300">Information Technology Center</p>
+                    <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-none">
+                        UKM FT ITC
+                    </h3>
+                    <p class="text-sm sm:text-base font-bold text-[#00aaff] mt-1.5">
+                        Information Technology Center
+                    </p>
+                </div>
+                
+                <p class="text-xs sm:text-sm text-slate-200 font-normal leading-relaxed text-justify sm:text-left max-w-md">
+                    <span class="font-bold text-white">UKM FT ITC (Information Technology Center)</span> merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi, dan mengembangkan kemampuan
+                </p>
+
+                <!-- Social Media Icons (Clean Icons Aligned Below Description) -->
+                <div class="flex items-center justify-center sm:justify-start gap-5 pt-3 sm:pt-4">
+                    <!-- Instagram -->
+                    <a href="#" aria-label="Instagram" class="text-white hover:text-[#00aaff] transition-colors transform hover:scale-110">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="#" aria-label="WhatsApp" class="text-white hover:text-[#00aaff] transition-colors transform hover:scale-110">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                        </svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="#" aria-label="YouTube" class="text-white hover:text-[#00aaff] transition-colors transform hover:scale-110">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="#" aria-label="TikTok" class="text-white hover:text-[#00aaff] transition-colors transform hover:scale-110">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
-            <p class="text-sm text-gray-300 leading-relaxed text-justify">
-                UKM FT ITC (Information Technology Center) merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi, dan mengembangkan kemampuan.
-            </p>
-            <!-- Social Icons -->
-            <div class="flex gap-4 pt-4">
-                <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-instagram text-xl"></i> IG</a>
-                <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-whatsapp text-xl"></i> WA</a>
-                <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-youtube text-xl"></i> YT</a>
-                <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-tiktok text-xl"></i> TK</a>
-            </div>
+
         </div>
 
         <!-- Kolom 2: Company Links -->
-        <div>
-            <h4 class="text-lg font-bold mb-6">Company</h4>
-            <ul class="space-y-3 text-sm text-gray-300">
-                <li><a href="#" class="hover:text-white transition">Beranda</a></li>
-                <li><a href="#" class="hover:text-white transition">Deskripsi</a></li>
-                <li><a href="#" class="hover:text-white transition">Sejarah</a></li>
-                <li><a href="#" class="hover:text-white transition">Visi & Misi</a></li>
-                <li><a href="#" class="hover:text-white transition">Proker</a></li>
-                <li><a href="#" class="hover:text-white transition">Divisi</a></li>
-                <li><a href="#" class="hover:text-white transition">Penugasan</a></li>
+        <div class="lg:col-span-3">
+            <h4 class="text-xl sm:text-2xl font-bold text-white mb-5">Company</h4>
+            <ul class="space-y-2.5 text-xs sm:text-sm font-semibold text-slate-200">
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Beranda</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Deskripsi</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Sejarah</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Visi &amp; Misi</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Proker</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Divisi</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Penugasan</a></li>
             </ul>
         </div>
 
         <!-- Kolom 3: Kontak -->
-        <div>
-            <h4 class="text-lg font-bold mb-6">Kontak</h4>
-            <ul class="space-y-4 text-sm text-gray-300">
+        <div class="lg:col-span-3">
+            <h4 class="text-xl sm:text-2xl font-bold text-white mb-5">Kontak</h4>
+            <ul class="space-y-4 text-xs sm:text-sm font-semibold text-white">
                 <li class="flex items-center gap-3">
-                    <span class="w-8 h-8 rounded-full border border-blue-500 flex items-center justify-center">📞</span>
-                    085681964839
+                    <svg class="w-5 h-5 text-white shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <span>085681964839</span>
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-8 h-8 rounded-full border border-blue-500 flex items-center justify-center">📞</span>
-                    085681964839
+                    <svg class="w-5 h-5 text-white shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <span>085681964839</span>
                 </li>
             </ul>
         </div>
+
     </div>
 
     <!-- Copyright -->
-    <div class="mt-16 pt-6 border-t border-blue-900/50 text-center text-sm text-gray-400 relative z-10">
-        @2026 <span class="font-bold text-blue-400">UKMFTITC</span>. All Rights Reserved
+    <div class="mt-14 sm:mt-16 pt-6 border-t border-blue-900/40 text-center text-xs sm:text-sm font-semibold text-slate-300 relative z-20">
+        @2026 <span class="font-bold text-[#00aaff]">UKMFTITC.</span> All Rights Reserved
     </div>
+
 </footer>
+
+        {{-- <!-- Kolom 2: Company Links -->
+        <div class="lg:col-span-3">
+            <h4 class="text-2xl sm:text-3xl font-black text-white mb-6">Company</h4>
+            <ul class="space-y-3.5 text-base sm:text-lg font-bold text-white/90">
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Beranda</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Deskripsi</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Sejarah</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Visi &amp; Misi</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Proker</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Divisi</a></li>
+                <li><a href="#" class="hover:text-[#00aaff] transition-colors">Penugasan</a></li>
+            </ul>
+        </div>
+
+        <!-- Kolom 3: Kontak -->
+        <div class="lg:col-span-3">
+            <h4 class="text-2xl sm:text-3xl font-black text-white mb-6">Kontak</h4>
+            <ul class="space-y-6 text-base sm:text-lg font-bold text-white">
+                <li class="flex items-center gap-4">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <span>085681964839</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <span>085681964839</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-16 md:mt-24 pt-8 border-t border-white/15 text-center text-sm sm:text-base md:text-lg font-bold text-white relative z-20">
+        @2026 <span class="font-black text-[#00aaff]">UKMFTITC.</span> All Rights Reserved
+    </div>
+
+</footer> --}}

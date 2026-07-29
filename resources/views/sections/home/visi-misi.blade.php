@@ -28,7 +28,7 @@
         aria-hidden="true"
         class="pointer-events-none absolute
             left-1/2 bottom-[-5px] z-0
-            w-[1000px] max-w-none
+            w-[990px] max-w-none
             -translate-x-1/2
             object-contain opacity-200
             origin-bottom scale-y-[1.3]

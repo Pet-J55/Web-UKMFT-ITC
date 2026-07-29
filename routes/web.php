@@ -1,5 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DivisiController;
 
-Route::view('/', 'pages.home')->name('home');
+Route::get('/', [DivisiController::class, 'home'])->name('home');
+Route::get('/divisi', [DivisiController::class, 'index'])->name('divisi');

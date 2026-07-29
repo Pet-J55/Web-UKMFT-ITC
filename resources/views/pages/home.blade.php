@@ -19,6 +19,10 @@
             @include('sections.home.profile')
             @include('sections.home.visi-misi')
             @include('sections.home.sejarah')
+            @include('sections.home.proker')
+            @include('sections.home.divisi')
+            @include('sections.home.penugasan')
+            <x-footer />
         </div>
     </div>
 @endsection

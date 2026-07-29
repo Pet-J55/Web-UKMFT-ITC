@@ -35,15 +35,15 @@
                     src="{{ asset('assets/images/sejarah-lingkaran.png') }}"
                     alt=""
                     aria-hidden="true"
-                    class="absolute left-[-50px] top-[-15px]
-                        z-10 w-[750px] max-w-none object-contain"
+                    class="absolute left-[-20px] top-[20px]
+                        z-10 w-[770px] max-w-none object-contain"
                 >
 
                 {{-- Maskot --}}
                 <img
                     src="{{ asset('assets/images/sejarah-maskot.png') }}"
                     alt="Maskot UKM FT ITC"
-                    class="absolute left-[-10px] top-[-145px]
+                    class="absolute left-[-10px] top-[-100px]
                         z-20 w-[620px] max-w-none object-contain
                         drop-shadow-[0_18px_18px_rgba(0,32,84,0.14)]"
                 >
@@ -57,22 +57,22 @@
                 xmlns="http://www.w3.org/2000/svg"
             >
                 {{-- 2023 --}}
-                <line x1="505" y1="255" x2="650" y2="215" stroke="black" stroke-width="1.5"/>
+                <line x1="505" y1="255" x2="650" y2="225" stroke="black" stroke-width="1.5"/>
                 <circle cx="505" cy="255" r="5.5" fill="#0A32C7"/>
                 <circle cx="687" cy="215" r="15" fill="#0A32C7"/>
 
                 {{-- 2024 --}}
-                <line x1="510" y1="355" x2="650" y2="395" stroke="black" stroke-width="1.5"/>
+                <line x1="510" y1="355" x2="650" y2="390" stroke="black" stroke-width="1.5"/>
                 <circle cx="510" cy="355" r="5.5" fill="#0A32C7"/>
                 <circle cx="687" cy="395" r="15" fill="#0A32C7"/>
 
                 {{-- 2025 --}}
-                <line x1="460" y1="430" x2="650" y2="565" stroke="black" stroke-width="1.5"/>
+                <line x1="460" y1="430" x2="660" y2="545" stroke="black" stroke-width="1.5"/>
                 <circle cx="460" cy="430" r="5.5" fill="#0A32C7"/>
                 <circle cx="687" cy="565" r="15" fill="#0A32C7"/>
 
                 {{-- 2026 --}}
-                <line x1="400" y1="520" x2="650" y2="710" stroke="black" stroke-width="1.5"/>
+                <line x1="400" y1="520" x2="660" y2="690" stroke="black" stroke-width="1.5"/>
                 <circle cx="400" cy="520" r="5.5" fill="#0A32C7"/>
                 <circle cx="687" cy="710" r="15" fill="#0A32C7"/>
             </svg>
