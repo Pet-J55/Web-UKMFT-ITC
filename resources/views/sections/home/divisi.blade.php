@@ -3,22 +3,17 @@
 
     <!-- Background Divisi Section -->
     <img 
-        src="{{ asset('assets/images/backround-divisi.png') }}" 
+        src="{{ asset('assets/images/background-divisi.png') }}" 
         alt="Background Divisi" 
-        class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0 opacity-75" 
+        class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0 opacity-80" 
     />
 
     <div class="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Title Badge -->
-        <div class="mb-10 flex items-center justify-between">
-            <div class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#002054] to-[#0256DD] px-8 sm:px-10 py-2.5 sm:py-3 text-xl sm:text-3xl font-extrabold text-white shadow-[0_10px_22px_rgba(0,32,84,0.28)]">
+        <div class="mb-10 flex items-center justify-start">
+            <div class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#002054] to-[#0256DD] min-w-[260px] sm:min-w-[320px] px-16 sm:px-24 py-3.5 sm:py-4 text-2xl sm:text-4xl font-black text-white shadow-[0_12px_28px_rgba(0,32,84,0.35)]">
                 Divisi
             </div>
-            
-            <a href="{{ route('divisi') }}" class="hidden sm:inline-flex items-center gap-2 text-[#0256DD] font-bold text-sm hover:underline">
-                Lihat Semua Divisi
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
         </div>
 
         @php
@@ -155,7 +150,7 @@
                     }
                 @endphp
 
-                <!-- Card Divisi Component (Clean Design) -->
+                <!-- Card Divisi Component -->
                 <div 
                     x-data="{ 
                         people: {{ json_encode($cardPeople) }}, 
@@ -166,9 +161,12 @@
                     }"
                     class="relative w-full max-w-[1000px] h-[540px] md:h-[550px] min-h-[540px] bg-gradient-to-br from-[#f8f9ff] to-[#e4effc] rounded-[36px] md:rounded-[40px] shadow-xl overflow-hidden shrink-0 snap-center transition-all duration-300"
                 >
-                    <!-- Background Dekoratif (Pure CSS, Crisp, Clean) -->
-                    <div class="absolute -right-20 top-10 w-[400px] h-[400px] border-[40px] border-blue-100/60 rounded-full opacity-70 pointer-events-none z-0"></div>
-                    <div class="absolute -right-10 top-20 w-[350px] h-[350px] border-[2px] border-blue-200 border-dashed rounded-full opacity-80 pointer-events-none z-0"></div>
+                    <!-- Card Background Image (background-card-divisi.png) -->
+                    <img 
+                        src="{{ asset('assets/images/background-card-divisi.png') }}" 
+                        alt="Background Card Divisi" 
+                        class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0 rounded-[36px] md:rounded-[40px]" 
+                    />
 
                     <!-- ================= KONTEN KIRI (Teks Divisi) ================= -->
                     <div class="absolute top-10 md:top-12 left-8 md:left-12 w-[55%] md:w-1/2 z-10">
@@ -177,32 +175,32 @@
                         </div>
 
                         <h3 class="text-xs font-bold text-gray-900 tracking-wider uppercase">DIVISI</h3>
-                        <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-700 drop-shadow-md mt-1 mb-3 md:mb-4 uppercase leading-tight">
+                        <h1 class="text-4xl md:text-6xl font-black drop-shadow-md mt-1 mb-3 md:mb-4 uppercase leading-tight" style="background-image: linear-gradient(90deg, #002C73 0%, #6FA6FF 50%, #0256DD 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
                             {{ $divisi['nama'] ?? $divisi['name'] ?? '' }}
                         </h1>
 
                         <p class="text-gray-700 text-xs md:text-sm leading-relaxed max-w-sm font-medium">
                             {{ $divisi['deskripsi'] ?? $divisi['desc'] ?? '' }}
                         </p>
-                        <div class="h-1.5 w-16 bg-blue-700 rounded-full mt-4 md:mt-6 shadow-sm"></div>
+                        <div class="h-1.5 w-16 bg-gradient-to-r from-[#0968FF] to-[#063E99] rounded-full mt-4 md:mt-6 shadow-sm"></div>
                     </div>
 
                     <!-- ================= KONTEN KANAN (Foto Personil & Blue Arch) ================= -->
-                    <div class="absolute bottom-16 right-8 md:right-24 w-[240px] md:w-[300px] h-[320px] md:h-[370px] z-0 flex justify-center items-end">
-                        <!-- Blue Arch Background -->
-                        <div class="absolute bottom-0 w-[220px] md:w-[280px] h-[240px] md:h-[300px] bg-[#8abffe] rounded-t-full shadow-inner z-0"></div>
-                        
-                        <!-- Main Person Photo (Dinamis Berubah saat Personil Diklik) -->
-                        <img 
-                            :src="people[selectedIdx] ? people[selectedIdx].foto : '{{ $cardPeople[0]['foto'] ?? '' }}'" 
-                            :alt="people[selectedIdx] ? people[selectedIdx].nama : ''" 
-                            class="relative z-10 h-[310px] md:h-[370px] object-cover object-bottom drop-shadow-2xl transition-all duration-300 transform scale-100 rounded-b-lg"
-                        />
+                    <div class="absolute bottom-12 right-6 md:right-16 z-10 flex justify-center items-end">
+                        <!-- Curved Dome Container (Memotong foto menjadi bentuk arch/lengkung di bagian atas) -->
+                        <div class="relative w-[240px] sm:w-[280px] md:w-[320px] h-[280px] sm:h-[320px] md:h-[360px] bg-[#82b8ff] rounded-t-full overflow-hidden shadow-lg border-2 border-white/40 flex items-end justify-center z-10">
+                            <!-- Main Person Photo (Dinamis Berubah saat Personil Diklik) -->
+                            <img 
+                                :src="people[selectedIdx] ? people[selectedIdx].foto : '{{ $cardPeople[0]['foto'] ?? '' }}'" 
+                                :alt="people[selectedIdx] ? people[selectedIdx].nama : ''" 
+                                class="w-full h-full object-cover object-top transition-all duration-300 transform scale-100"
+                            />
+                        </div>
                         
                         <!-- Floating Name Badge (Dinamis Berubah Sesuai Orang Terpilih) -->
-                        <div class="absolute top-10 md:top-14 -left-6 md:-left-16 bg-white px-5 md:px-6 py-2 md:py-2.5 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.15)] z-20 text-center flex flex-col justify-center items-center border border-blue-50/80 transition-all duration-300">
+                        <div class="absolute top-1/3 -left-6 md:-left-16 bg-white px-5 md:px-6 py-2 md:py-2.5 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.15)] z-20 text-center flex flex-col justify-center items-center border border-blue-50/80 transition-all duration-300">
                             <span x-text="people[selectedIdx] ? people[selectedIdx].nama : '{{ $cardPeople[0]['nama'] ?? '' }}'" class="font-black text-gray-900 text-xs md:text-sm leading-tight uppercase whitespace-nowrap"></span>
-                            <span x-text="people[selectedIdx] ? people[selectedIdx].jabatan : '{{ $cardPeople[0]['jabatan'] ?? '' }}'" class="text-blue-600 text-[10px] md:text-xs font-semibold mt-0.5 whitespace-nowrap"></span>
+                            <span x-text="people[selectedIdx] ? people[selectedIdx].jabatan : '{{ $cardPeople[0]['jabatan'] ?? '' }}'" class="text-[#0256DD] text-[10px] md:text-xs font-extrabold mt-0.5 whitespace-nowrap"></span>
                         </div>
                     </div>
 
@@ -267,6 +265,16 @@
             >
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
             </button>
+        </div>
+
+        <!-- Tombol Lihat Semua Divisi (Bottom Left) -->
+        <div class="mt-10 flex justify-start">
+            <a href="{{ route('divisi') }}" class="inline-flex items-center gap-3.5 bg-gradient-to-r from-[#002054] to-[#0256DD] text-white font-extrabold text-lg sm:text-2xl px-8 sm:px-10 py-3.5 sm:py-4 rounded-full shadow-[0_10px_25px_rgba(0,32,84,0.3)] hover:shadow-xl hover:scale-105 transition-all duration-300">
+                Lihat Semua Divisi
+                <svg class="w-6 sm:w-7 h-6 sm:h-7" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+            </a>
         </div>
     </div>
 </section>

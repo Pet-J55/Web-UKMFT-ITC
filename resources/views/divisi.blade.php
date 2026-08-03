@@ -22,6 +22,13 @@
 </head>
 <body class="bg-slate-900 min-h-screen flex flex-col items-center justify-center p-4 md:p-8 gap-6 relative overflow-x-hidden">
 
+    <!-- Background Divisi Image -->
+    <img 
+        src="{{ asset('assets/images/background-divisi.png') }}" 
+        alt="Background Divisi" 
+        class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0 opacity-80" 
+    />
+
     <!-- Header Navigation Back Link -->
     <div class="w-full max-w-[1000px] flex items-center justify-between z-20">
         <a href="{{ route('home') }}" class="inline-flex items-center gap-2 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-sm font-semibold transition-all backdrop-blur-md">
@@ -115,7 +122,7 @@
                 }
             @endphp
 
-            <!-- Single Card Divisi Component (Clean Design) -->
+            <!-- Single Card Divisi Component -->
             <div 
                 x-data="{ 
                     people: {{ json_encode($cardPeople) }}, 
@@ -126,9 +133,12 @@
                 }"
                 class="relative w-full max-w-[1000px] h-[550px] min-h-[550px] bg-gradient-to-br from-[#f8f9ff] to-[#e4effc] rounded-[40px] shadow-2xl overflow-hidden shrink-0 snap-center transition-all duration-300"
             >
-                <!-- Background Dekoratif (Pure CSS, Clean, Crisp) -->
-                <div class="absolute -right-20 top-10 w-[400px] h-[400px] border-[40px] border-blue-100/60 rounded-full opacity-70 pointer-events-none z-0"></div>
-                <div class="absolute -right-10 top-20 w-[350px] h-[350px] border-[2px] border-blue-200 border-dashed rounded-full opacity-80 pointer-events-none z-0"></div>
+                <!-- Card Background Image (background-card-divisi.png) -->
+                <img 
+                    src="{{ asset('assets/images/background-card-divisi.png') }}" 
+                    alt="Background Card Divisi" 
+                    class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0 rounded-[40px]" 
+                />
 
                 <!-- ================= KONTEN KIRI (Teks Divisi) ================= -->
                 <div class="absolute top-12 left-12 w-1/2 z-10">
@@ -137,14 +147,14 @@
                     </div>
 
                     <h3 class="text-xs font-bold text-gray-900 tracking-wider uppercase">DIVISI</h3>
-                    <h1 class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-700 drop-shadow-md mt-1 mb-4 uppercase leading-tight">
+                    <h1 class="text-5xl md:text-6xl font-black drop-shadow-md mt-1 mb-4 uppercase leading-tight" style="background-image: linear-gradient(90deg, #002C73 0%, #6FA6FF 50%, #0256DD 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
                         {{ $divisi['nama'] }}
                     </h1>
 
                     <p class="text-gray-700 text-sm leading-relaxed max-w-sm font-medium">
                         {{ $divisi['deskripsi'] }}
                     </p>
-                    <div class="h-1.5 w-16 bg-blue-700 rounded-full mt-6 shadow-sm"></div>
+                    <div class="h-1.5 w-16 bg-gradient-to-r from-[#0968FF] to-[#063E99] rounded-full mt-6 shadow-sm"></div>
                 </div>
 
                 <!-- ================= KONTEN KANAN (Foto Personil & Blue Arch) ================= -->
