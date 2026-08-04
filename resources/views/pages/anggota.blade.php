@@ -139,16 +139,20 @@
         @endphp
 
         <!-- ================= SECTION DAFTAR ANGGOTA DIVISI ================= -->
-        <section id="divisi-anggota" class="relative py-16 md:py-24 overflow-hidden bg-[#EBF3FA]">
-            <!-- Background Image -->
+        <section id="divisi-anggota" class="relative pt-16 md:pt-24 pb-24 md:pb-32 overflow-hidden bg-[#CEDFFF]">
+
+            <!-- Wave Blue Image — sits ON TOP of the bg color, behind all text/tabs content -->
             <img 
-                src="{{ asset('assets/images/background-divisi.png') }}" 
-                alt="Background Divisi" 
-                class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0 opacity-80" 
+                src="{{ asset('assets/images/wave-blue.png') }}" 
+                alt="Wave Blue Background" 
+                class="absolute top-0 left-0 w-full h-[480px] sm:h-[560px] md:h-[640px] object-cover object-center pointer-events-none z-10 opacity-100" 
             />
 
+            <!-- Light card panel that peeks below the wave — same layering trick as reference -->
+            <div class="absolute bottom-0 left-0 right-0 h-[55%] bg-[#CEDFFF] rounded-t-[60px] md:rounded-t-[90px] z-10 shadow-[0_-8px_40px_rgba(0,56,145,0.08)]"></div>
+
             <div 
-                class="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8"
+                class="relative z-20 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8"
                 x-data="{
                     activeDivisi: '{{ $formatted_divisi[0]['nama'] ?? 'LITBANG' }}',
                     divisiList: {{ json_encode($formatted_divisi) }},
@@ -209,7 +213,7 @@
                 </div>
 
                 <!-- ================= TAB SELECTOR BAR (IMAGE 1 CONTAINER) ================= -->
-                <div class="mb-12 flex justify-center">
+                <div class="mb-16 flex justify-center">
                     <div class="bg-white/90 backdrop-blur-xl rounded-[32px] p-2.5 sm:p-3 shadow-xl border border-white/80 inline-flex items-center justify-center gap-2 sm:gap-4 max-w-full overflow-x-auto hide-scrollbar">
                         <template x-for="d in divisiList" :key="d.nama">
                             <div 
@@ -265,8 +269,8 @@
                     </div>
                 </div>
 
-                <!-- ================= VERTICAL STACK OF INDIVIDUAL MEMBER CARDS WITH GREYISH-BLUE WRAPPER ================= -->
-                <div class="relative w-full max-w-[1080px] mx-auto bg-[#D4E4F7]/80 backdrop-blur-md rounded-[44px] md:rounded-[56px] p-4 sm:p-7 md:p-10 shadow-[0_15px_40px_rgba(0,32,84,0.06)] border border-white/80 flex flex-col gap-8 md:gap-12 items-center">
+                <!-- ================= VERTICAL STACK OF INDIVIDUAL MEMBER CARDS ================= -->
+                <div class="relative w-full max-w-[1080px] mx-auto bg-[#003891]/10 backdrop-blur-md rounded-[44px] md:rounded-[56px] p-4 sm:p-7 md:p-10 shadow-[0_15px_40px_rgba(0,32,84,0.06)] border border-white/60 flex flex-col gap-8 md:gap-12 items-center">
                     <template x-for="(mem, memIdx) in currentMembers" :key="activeDivisi + '-' + memIdx + '-' + mem.nama">
                         <!-- Individual Member Card Component -->
                         <div 
