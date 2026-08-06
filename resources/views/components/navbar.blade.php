@@ -47,7 +47,7 @@
             </a>
 
             <a
-                href="#kegiatan"
+                href="{{ route('proker') }}"
                 class="transition-colors hover:text-cyan-200"
             >
                 Kegiatan
@@ -97,7 +97,7 @@
             <a href="#beranda">Beranda</a>
             <a href="#deskripsi">Deskripsi</a>
             <a href="#divisi">Divisi</a>
-            <a href="#kegiatan">Kegiatan</a>
+            <a href="{{ route('proker') }}">Kegiatan</a>
             <a href="#kontak">Kontak</a>
         </div>
     </div>

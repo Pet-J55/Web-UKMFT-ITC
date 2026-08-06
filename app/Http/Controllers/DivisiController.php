@@ -118,4 +118,9 @@ class DivisiController extends Controller
         $data_divisi = $this->getDivisiData();
         return view('pages.anggota', compact('data_divisi'));
     }
+
+    public function proker()
+    {
+        return view('pages.proker');
+    }
 }
