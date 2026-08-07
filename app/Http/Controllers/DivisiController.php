@@ -123,4 +123,9 @@ class DivisiController extends Controller
     {
         return view('pages.proker');
     }
+
+    public function viewProker()
+    {
+        return view('pages.view-proker');
+    }
 }
