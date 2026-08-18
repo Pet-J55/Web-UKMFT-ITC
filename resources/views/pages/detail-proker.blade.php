@@ -374,13 +374,21 @@
                 <h2 style="font-size: 18px; font-weight: 800; color: #1d4fbb; margin: 0 0 20px 0;">Dokumentasi</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px;">
                     @foreach($proker['dokumentasi'] as $dok)
-                    <div style="border-radius: 14px; overflow: hidden; box-shadow: 0 3px 14px rgba(29,79,187,0.10); border: 1px solid #e2ecff; background: #fff; transition: transform 0.2s, box-shadow 0.2s;"
+                    @php $imgSrc = ($dok['type'] ?? 'foto') === 'video' ? ($dok['thumbnail'] ?? '') : ($dok['img'] ?? ''); @endphp
+                    <div style="border-radius: 14px; overflow: hidden; box-shadow: 0 3px 14px rgba(29,79,187,0.10); border: 1px solid #e2ecff; background: #fff; transition: transform 0.2s, box-shadow 0.2s; position: relative;"
                          onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 28px rgba(29,79,187,0.16)'"
                          onmouseout="this.style.transform=''; this.style.boxShadow='0 3px 14px rgba(29,79,187,0.10)'">
-                        <img src="{{ $dok['img'] }}"
+                        <img src="{{ $imgSrc }}"
                              onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80'"
                              alt="{{ $dok['caption'] ?? 'Dokumentasi' }}"
                              style="width: 100%; height: 150px; object-fit: cover; display: block;">
+                        @if(($dok['type'] ?? 'foto') === 'video')
+                        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                            <div style="width: 36px; height: 36px; background: rgba(255,255,255,0.92); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.25);">
+                                <svg width="14" height="14" fill="#1d4fbb" viewBox="0 0 24 24" style="margin-left:2px;"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        @endif
                         @if(!empty($dok['caption']))
                         <div style="padding: 10px 14px; font-size: 12px; color: #374151; font-weight: 500;">{{ $dok['caption'] }}</div>
                         @endif
@@ -456,7 +464,7 @@
             </div>
 
             {{-- View-all link --}}
-            <a href="{{ route('view-dokumentasi') }}"
+            <a href="{{ route('detail-dokumentasi', $proker['slug']) }}"
                style="display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 700; color: #1d4fbb; text-decoration: none; border: 1.5px solid #c4d4f5; border-radius: 999px; padding: 9px 20px; background: #fff; transition: all 0.2s; white-space: nowrap; box-shadow: 0 2px 8px rgba(29,79,187,0.07);"
                onmouseover="this.style.background='#eef3ff'; this.style.borderColor='#1d4fbb';"
                onmouseout="this.style.background='#fff'; this.style.borderColor='#c4d4f5';">
@@ -467,10 +475,13 @@
             </a>
         </div>
 
-        {{-- Photo Grid — 3 columns, first image tall --}}
-        @php $maxDok = min(6, count($proker['dokumentasi'])); @endphp
+        {{-- Photo Grid — 3 columns, first image tall (fotos only) --}}
+        @php
+            $fotoItems = collect($proker['dokumentasi'])->where('type', 'foto')->values()->all();
+            $maxDok    = min(6, count($fotoItems));
+        @endphp
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 160px; gap: 14px; grid-auto-flow: dense;">
-            @foreach(array_slice($proker['dokumentasi'], 0, $maxDok) as $idx => $dok)
+            @foreach(array_slice($fotoItems, 0, $maxDok) as $idx => $dok)
             <div style="
                     border-radius: 14px;
                     overflow: hidden;
@@ -505,10 +516,10 @@
         </div>
 
         {{-- Photo count badge --}}
-        @if(count($proker['dokumentasi']) > 6)
+        @if(count($fotoItems) > 6)
         <div style="text-align: center; margin-top: 20px;">
             <span style="font-size: 13px; color: #6b7a99; font-weight: 500;">
-                Menampilkan 6 dari {{ count($proker['dokumentasi']) }} foto dokumentasi
+                Menampilkan 6 dari {{ count($fotoItems) }} foto dokumentasi
             </span>
         </div>
         @endif

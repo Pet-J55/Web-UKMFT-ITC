@@ -8,3 +8,7 @@ Route::get('/divisi', [DivisiController::class, 'index'])->name('divisi');
 Route::get('/anggota', [DivisiController::class, 'anggota'])->name('anggota');
 Route::get('/proker', [DivisiController::class, 'proker'])->name('proker');
 Route::get('/view-proker', [DivisiController::class, 'viewProker'])->name('view-proker');
+Route::get('/view-proker/{slug}', [DivisiController::class, 'detailProker'])->name('detail-proker');
+Route::get('/view-dokumentasi', [DivisiController::class, 'viewDokumentasi'])->name('view-dokumentasi');
+Route::get('/view-dokumentasi/{slug}', [DivisiController::class, 'detailDokumentasi'])->name('detail-dokumentasi');
+Route::get('/penugasan', [DivisiController::class, 'penugasan'])->name('penugasan');
