@@ -18,17 +18,15 @@ class DivisiController extends Controller
                 'deskripsi' => 'Berfokus pada pengembangan software aplikasi, riset teknologi, dan inovasi digital untuk memberikan solusi teknologi yang berdampak nyata.',
                 'icon' => '</>',
                 'ketua' => [
-                    'nama' => 'SAFRI SAFRU',
+                    'nama' => 'SAFRI Iwanussuyuf',
                     'jabatan' => 'Ketua Divisi',
                     'foto' => 'profile-1.png'
                 ],
                 'anggota' => [
-                    ['nama' => 'SAFRA', 'jabatan' => 'Kadiv', 'foto' => 'profile-1.png'],
-                    ['nama' => 'RINA', 'jabatan' => 'Sekdiv', 'foto' => 'profile-2.png'],
-                    ['nama' => 'ANDI', 'jabatan' => 'Anggota', 'foto' => 'profile-3.png'],
-                    ['nama' => 'BUDI', 'jabatan' => 'Anggota', 'foto' => 'profile-1.png'],
-                    ['nama' => 'CITRA', 'jabatan' => 'Anggota', 'foto' => 'profile-2.png'],
-                    ['nama' => 'DINI', 'jabatan' => 'Anggota', 'foto' => 'profile-3.png'],
+                    ['nama' => 'Garin', 'jabatan' => 'Sekdiv', 'foto' => 'profile-1.png'],
+                    ['nama' => 'Fima', 'jabatan' => 'Anggota', 'foto' => 'profile-2.png'],
+                    ['nama' => 'Salam', 'jabatan' => 'Anggota', 'foto' => 'profile-3.png'],
+                    ['nama' => 'Fabian', 'jabatan' => 'Anggota', 'foto' => 'profile-1.png'],
                 ]
             ],
             [
