@@ -1,14 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DivisiController;
+use App\Http\Controllers\MainController;
 
-Route::get('/', [DivisiController::class, 'home'])->name('home');
-Route::get('/divisi', [DivisiController::class, 'index'])->name('divisi');
-Route::get('/anggota', [DivisiController::class, 'anggota'])->name('anggota');
-Route::get('/proker', [DivisiController::class, 'proker'])->name('proker');
-Route::get('/view-proker', [DivisiController::class, 'viewProker'])->name('view-proker');
-Route::get('/view-proker/{slug}', [DivisiController::class, 'detailProker'])->name('detail-proker');
-Route::get('/view-dokumentasi', [DivisiController::class, 'viewDokumentasi'])->name('view-dokumentasi');
-Route::get('/view-dokumentasi/{slug}', [DivisiController::class, 'detailDokumentasi'])->name('detail-dokumentasi');
-Route::get('/penugasan', [DivisiController::class, 'penugasan'])->name('penugasan');
+Route::get('/', [MainController::class, 'home'])->name('home');// Sudah
+
+Route::get('/divisi', [MainController::class, 'divisi'])->name('divisi');// Sudah
+Route::get('/anggota', [MainController::class, 'anggota'])->name('anggota');// Belum
+Route::get('/proker', [MainController::class, 'proker'])->name('proker');// Sudah
+Route::get('/view-proker', [MainController::class, 'viewProker'])->name('view-proker');// Sudah
+Route::get('/view-proker/{id}', [MainController::class, 'detailProker'])->name('detail-proker');// Sudah
+Route::get('/view-dokumentasi', [MainController::class, 'viewDokumentasi'])->name('view-dokumentasi');// Belum
+Route::get('/view-dokumentasi/{id}', [MainController::class, 'detailDokumentasi'])->name('detail-dokumentasi');// Sudah tapi data nya harus minta infokom
+Route::get('/penugasan', [MainController::class, 'penugasan'])->name('penugasan');// Belum

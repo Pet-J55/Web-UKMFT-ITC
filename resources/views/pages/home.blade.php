@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Beranda — UKM FT ITC')
+@section('title', 'Beranda — UKMFT-ITC')
 
 @section('content')
     <div class="relative overflow-x-hidden">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Program Kerja — UKM FT ITC')
+@section('title', 'Program Kerja — UKMFT-ITC')
 
 @section('content')
 <div style="font-family: 'Poppins', sans-serif; min-height: 100vh; background: #f0f5ff; overflow-x: hidden;">
@@ -33,18 +33,19 @@
                     PROGRAM KERJA
                 </h1>
                 <h1 style="font-size: 72px; font-weight: 900; line-height: 1.0; margin: 0 0 28px 0; padding: 0; color: #1d4fbb; letter-spacing: -1px;">
-                    UKM FT ITC
+                    UKMFT-ITC
                 </h1>
                 <p style="font-size: 15px; font-weight: 500; color: #2d3748; line-height: 1.75; max-width: 430px; margin: 0;">
-                    Program kerja UKM FT ITC dirancang untuk mengembangkan<br>
-                    potensi anggota mealalui kegiatan yang inovatif, kolaboratif,<br>
+                    Program kerja UKMFT-ITC dirancang untuk mengembangkan
+                    potensi anggota melalui kegiatan yang inovatif, kolaboratif,
                     dan berdampak positif.
                 </p>
             </div>
 
             {{-- Right: Image --}}
             <div style="flex-shrink: 0; display: flex; align-items: flex-start; justify-content: flex-end; padding-right: 20px; padding-top: 10px;">
-                <img src="{{ asset('assets/images/head-proker.png') }}"
+                <img
+                     src="{{ asset('assets/images/profile-1.jpg') }}"
                      onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'"
                      alt="Meeting Proker"
                      style="width: 235px; height: 157px; object-fit: cover; border-radius: 20px 20px 20px 0; box-shadow: 8px 12px 28px rgba(0, 40, 120, 0.18); display: block;">
@@ -59,35 +60,35 @@
                     <div style="width:46px;height:46px;background:linear-gradient(135deg,#2563eb,#1d4fbb);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                         <svg width="24" height="24" fill="white" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/></svg>
                     </div>
-                    <div><div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">5</div><div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">Divisi<br>Aktif</div></div>
+                    <div><div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">{{ $jumlahDivisi }}</div><div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">Divisi<br>Aktif</div></div>
                 </div>
 
                 <div style="background:#fff;border:1.5px solid #dbe8ff;border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 16px rgba(29,79,187,0.09);flex:1;min-width:140px;">
                     <div style="width:46px;height:46px;background:linear-gradient(135deg,#2563eb,#1d4fbb);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                         <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
                     </div>
-                    <div><div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">20+</div><div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">Program Kerja<br><span style="font-weight:400;font-size:10px;">Tiap Tahun</span></div></div>
+                    <div><div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">{{ $jumlahProker }}</div><div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">Program Kerja<br><span style="font-weight:400;font-size:10px;">Tiap Tahun</span></div></div>
                 </div>
 
                 <div style="background:#fff;border:1.5px solid #dbe8ff;border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 16px rgba(29,79,187,0.09);flex:1;min-width:140px;">
                     <div style="width:46px;height:46px;background:linear-gradient(135deg,#1d50b3,#0e3590);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                         <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     </div>
-                    <div><div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">50+</div><div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">Kegiatan<br><span style="font-weight:400;font-size:10px;">Terlaksana</span></div></div>
+                    <div><div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">{{ $jumlahKegiatan }}</div><div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">Kegiatan<br><span style="font-weight:400;font-size:10px;">Terlaksana</span></div></div>
                 </div>
 
                 <div style="background:#fff;border:1.5px solid #dbe8ff;border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 16px rgba(29,79,187,0.09);flex:1;min-width:140px;">
                     <div style="width:46px;height:46px;background:linear-gradient(135deg,#1d50b3,#0e3590);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                         <svg width="24" height="24" fill="white" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
                     </div>
-                    <div><div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">100+</div><div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">Anggota<br><span style="font-weight:400;font-size:10px;">Terlibat</span></div></div>
+                    <div><div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">{{ $totalPeserta }}</div><div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">Anggota<br><span style="font-weight:400;font-size:10px;">Terlibat</span></div></div>
                 </div>
 
                 <div style="background:#fff;border:1.5px solid #dbe8ff;border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 16px rgba(29,79,187,0.09);flex:1;min-width:140px;">
                     <div style="width:46px;height:46px;background:linear-gradient(135deg,#0e3590,#0a2670);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                         <svg width="24" height="24" fill="white" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
                     </div>
-                    <div><div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">500+</div><div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">Dokumentasi<br><span style="font-weight:400;font-size:10px;">Kegiatan</span></div></div>
+                    <div><div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">{{ $jumlahDokumentasi }}</div><div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">Dokumentasi<br><span style="font-weight:400;font-size:10px;">Kegiatan</span></div></div>
                 </div>
 
             </div>
@@ -112,11 +113,11 @@
 
                     @php
                         $divisiList = [
-                            ['key' => 'LITBANG', 'label' => 'LITBANG', 'icon' => '</>'],
-                            ['key' => 'HUMAS',   'label' => 'HUMAS',   'icon' => '📢'],
-                            ['key' => 'PK',      'label' => 'P&K',     'icon' => '📚'],
+                            ['key' => 'Litbang', 'label' => 'LITBANG', 'icon' => '</>'],
+                            ['key' => 'Humas',   'label' => 'HUMAS',   'icon' => '📢'],
+                            ['key' => 'P&K',     'label' => 'P&K',     'icon' => '📚'],
                             ['key' => 'PSDM',    'label' => 'PSDM',    'icon' => '🤝'],
-                            ['key' => 'INFOKOM', 'label' => 'INFOKOM', 'icon' => '🎨'],
+                            ['key' => 'Infokom', 'label' => 'INFOKOM', 'icon' => '🎨'],
                         ];
                     @endphp
 
@@ -139,11 +140,11 @@
                         <select id="filter-divisi-select" onchange="applyFilter()"
                             style="width:100%;font-family:'Poppins',sans-serif;font-size:12px;padding:9px 12px;border:1.5px solid #dbe8ff;border-radius:10px;color:#2d3748;background:#f8faff;outline:none;cursor:pointer;">
                             <option value="">Semua Divisi</option>
-                            <option value="LITBANG">LITBANG</option>
-                            <option value="HUMAS">HUMAS</option>
-                            <option value="PK">P&K</option>
+                            <option value="Litbang">LITBANG</option>
+                            <option value="Humas">HUMAS</option>
+                            <option value="P&K">P&K</option>
                             <option value="PSDM">PSDM</option>
-                            <option value="INFOKOM">INFOKOM</option>
+                            <option value="Infokom">INFOKOM</option>
                         </select>
                     </div>
 
@@ -185,49 +186,57 @@
                 {{-- Cards Grid --}}
                 <div id="proker-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
                     @php
-                    $prokerList = [
-                        ['slug'=>'workshop-web-development','divisi'=>'LITBANG','divisiColor'=>'#2563eb','tahun'=>'2026','judul'=>'Workshop Web Development','deskripsi'=>'Belajar Pengembangan web mulai dari dasar hingga pro','tanggal'=>'16 Jun 2026','lokasi'=>'RKBF 204','peserta'=>60,'img'=>'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80'],
-                        ['slug'=>'pelatihan-ui-ux-design','divisi'=>'LITBANG','divisiColor'=>'#2563eb','tahun'=>'2026','judul'=>'Pelatihan UI/UX Design','deskripsi'=>'Meningkatkan kemampuan desain digital secara profesional','tanggal'=>'16 Jun 2026','lokasi'=>'RKBF 2004','peserta'=>60,'img'=>'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80'],
-                        ['slug'=>'workshop-web-development','divisi'=>'LITBANG','divisiColor'=>'#2563eb','tahun'=>'2026','judul'=>'Workshop Web Development','deskripsi'=>'Belajar Pengembangan web mulai dari dasar dan sehingga pro','tanggal'=>'16 Jun 2026','lokasi'=>'RKBF 2004','peserta'=>60,'img'=>'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=800&q=80'],
-                        ['slug'=>'mini-study-club','divisi'=>'PK','divisiColor'=>'#0891b2','tahun'=>'2026','judul'=>'Mini Study Club','deskripsi'=>'Belajar Pengembangan web mulai dari dasar dan sehingga pro','tanggal'=>'16 Jun 2026','lokasi'=>'RKBF 2004','peserta'=>60,'img'=>'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80'],
-                        ['slug'=>'family-time','divisi'=>'PSDM','divisiColor'=>'#7c3aed','tahun'=>'2026','judul'=>'Family Time','deskripsi'=>'Mempererat keakraban antar anggota melalui kegiatan seru bersama','tanggal'=>'20 Jul 2026','lokasi'=>'RKBF 2004','peserta'=>80,'img'=>'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80'],
-                        ['slug'=>'foto-pengurus','divisi'=>'INFOKOM','divisiColor'=>'#d97706','tahun'=>'2026','judul'=>'Foto Pengurus','deskripsi'=>'Sesi foto resmi pengurus untuk keperluan publikasi dan dokumentasi','tanggal'=>'5 Agu 2026','lokasi'=>'RKBF 2004','peserta'=>50,'img'=>'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80'],
-                        ['slug'=>'studi-banding-eksternal','divisi'=>'HUMAS','divisiColor'=>'#16a34a','tahun'=>'2025','judul'=>'Studi Banding Eksternal','deskripsi'=>'Kunjungan ke organisasi kampus lain untuk bertukar pikiran','tanggal'=>'25 Sep 2025','lokasi'=>'RKBF 2004','peserta'=>40,'img'=>'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80'],
-                        ['slug'=>'sosialisasi-ukm','divisi'=>'HUMAS','divisiColor'=>'#16a34a','tahun'=>'2025','judul'=>'Sosialisasi UKM','deskripsi'=>'Memperkenalkan UKM FT ITC kepada mahasiswa baru','tanggal'=>'10 Okt 2025','lokasi'=>'RKBF 2004','peserta'=>120,'img'=>'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80'],
-                    ];
+                        $colorMap = [
+                            'Litbang' => '#2563eb',
+                            'P&K'     => '#0891b2',
+                            'PSDM'    => '#7c3aed',
+                            'Infokom' => '#d97706',
+                            'Humas'   => '#16a34a',
+                            'BPH'     => '#dc2626'
+                        ];
                     @endphp
 
-                    @foreach($prokerList as $p)
+                    @foreach($proker as $p)
+                    @php
+                        $namaDivisi = $p->divisi ? $p->divisi->nama_divisi : 'Umum';
+                        $divisiColor = $colorMap[$namaDivisi] ?? '#2563eb';
+                        $tahun = $p->tanggal_berlangsung ? \Carbon\Carbon::parse($p->tanggal_berlangsung)->format('Y') : '2026';
+                        $tanggalFormatted = $p->tanggal_berlangsung ? \Carbon\Carbon::parse($p->tanggal_berlangsung)->translatedFormat('d M Y') : '-';
+                        
+                        // Gambar Handling
+                        $imgSrc = asset('assets/images/proker/' . $p->foto . '.webp');
+                    @endphp
+
                     <div class="proker-card"
-                         data-divisi="{{ $p['divisi'] }}"
-                         data-tahun="{{ $p['tahun'] }}"
-                         data-judul="{{ strtolower($p['judul']) }}"
+                         data-divisi="{{ $namaDivisi }}"
+                         data-tahun="{{ $tahun }}"
+                         data-judul="{{ strtolower($p->nama) }}"
                          style="background:#fff;border:1.5px solid #e2ecff;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(29,79,187,0.08);display:flex;flex-direction:row;transition:box-shadow 0.2s;"
                          onmouseover="this.style.boxShadow='0 8px 28px rgba(29,79,187,0.15)'"
                          onmouseout="this.style.boxShadow='0 3px 14px rgba(29,79,187,0.08)'">
 
                         {{-- Card Left: Text --}}
                         <div style="flex:1;padding:18px 16px;display:flex;flex-direction:column;min-width:0;">
-                            <span style="display:inline-block;background:{{ $p['divisiColor'] }};color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:999px;margin-bottom:8px;letter-spacing:0.5px;width:fit-content;">{{ $p['divisi'] == 'PK' ? 'P&K' : $p['divisi'] }}</span>
-                            <h3 style="font-size:15px;font-weight:800;color:{{ $p['divisiColor'] }};margin:0 0 7px 0;line-height:1.3;">{{ $p['judul'] }}</h3>
-                            <p style="font-size:12px;color:#5a6a8a;line-height:1.6;margin:0 0 12px 0;flex:1;">{{ $p['deskripsi'] }}</p>
+                            <span style="display:inline-block;background:{{ $divisiColor }};color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:999px;margin-bottom:8px;letter-spacing:0.5px;width:fit-content;">{{ strtoupper($namaDivisi) }}</span>
+                            <h3 style="font-size:15px;font-weight:800;color:{{ $divisiColor }};margin:0 0 7px 0;line-height:1.3;">{{ $p->nama }}</h3>
+                            <p style="font-size:12px;color:#5a6a8a;line-height:1.6;margin:0 0 12px 0;flex:1;">{{ $p->deskripsi }}</p>
 
                             <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:12px;">
                                 <span style="font-size:11px;color:#6b7a99;display:flex;align-items:center;gap:6px;">
                                     <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                                    {{ $p['tanggal'] }}
+                                    {{ $tanggalFormatted }}
                                 </span>
                                 <span style="font-size:11px;color:#6b7a99;display:flex;align-items:center;gap:6px;">
                                     <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                                    {{ $p['lokasi'] }}
+                                    {{ $p->lokasi }}
                                 </span>
                                 <span style="font-size:11px;color:#6b7a99;display:flex;align-items:center;gap:6px;">
                                     <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                                    {{ $p['peserta'] }} Peserta
+                                    {{ $p->peserta }} Peserta
                                 </span>
                             </div>
 
-                            <a href="{{ route('detail-proker', $p['slug']) }}" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:#1d4fbb;text-decoration:none;border:1.5px solid #1d4fbb;border-radius:8px;padding:7px 14px;width:fit-content;transition:all 0.2s;"
+                            <a href="{{ route('detail-proker', $p->id) }}" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:#1d4fbb;text-decoration:none;border:1.5px solid #1d4fbb;border-radius:8px;padding:7px 14px;width:fit-content;transition:all 0.2s;"
                                onmouseover="this.style.background='#1d4fbb';this.style.color='#fff'"
                                onmouseout="this.style.background='transparent';this.style.color='#1d4fbb'">
                                 Lihat Detail
@@ -237,8 +246,10 @@
 
                         {{-- Card Right: Image --}}
                         <div style="flex-shrink:0;width:140px;min-height:100%;overflow:hidden;">
-                            <img src="{{ $p['img'] }}" alt="{{ $p['judul'] }}"
-                                 style="width:100%;height:100%;object-fit:cover;display:block;min-height:200px;">
+                            <img
+                                src="{{ $imgSrc }}"
+                                alt="{{ $p->nama }}"
+                                style="width:100%;height:100%;object-fit:cover;display:block;min-height:200px;">
                         </div>
                     </div>
                     @endforeach
@@ -265,7 +276,7 @@
         activeDivisi = key;
 
         // Update tab styles
-        const tabs = ['semua','LITBANG','HUMAS','PK','PSDM','INFOKOM'];
+        const tabs = ['semua','Litbang','Humas','P&K','PSDM','Infokom'];
         tabs.forEach(t => {
             const el = document.getElementById('tab-' + t);
             if (!el) return;
@@ -292,10 +303,9 @@
         const divisiSel  = document.getElementById('filter-divisi-select').value;
         const tahunSel   = document.getElementById('filter-tahun-select').value;
 
-        // If dropdown changes, update active tab state too
         if (divisiSel !== '' && divisiSel !== activeDivisi) {
             activeDivisi = divisiSel;
-            const tabs = ['semua','LITBANG','HUMAS','PK','PSDM','INFOKOM'];
+            const tabs = ['semua','Litbang','Humas','P&K','PSDM','Infokom'];
             tabs.forEach(t => {
                 const el = document.getElementById('tab-' + t);
                 if (!el) return;

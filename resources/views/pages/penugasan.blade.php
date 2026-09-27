@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Penugasan Infinite — UKM FT ITC')
+@section('title', 'Penugasan Infinite — UKMFT-ITC')
 
 @section('content')
 <div class="relative overflow-x-hidden min-h-screen" style="background: #020b1e;">

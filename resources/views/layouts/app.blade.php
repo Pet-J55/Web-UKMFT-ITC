@@ -8,7 +8,8 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>@yield('title', 'UKM FT ITC')</title>
+    <title>@yield('title', 'UKMFT-ITC')</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/logo-itc.png') }}">
 
     @vite([
         'resources/css/app.css',

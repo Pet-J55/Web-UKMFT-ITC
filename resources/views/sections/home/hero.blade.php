@@ -20,7 +20,7 @@
                        bg-[#d8f1ff] px-3 py-1
                        text-[20px] font-extrabold text-[#000000]"
             >
-                UKM FT ITC
+                UKMFT-ITC
             </span>
 
             <h1
@@ -96,7 +96,7 @@
         <div class="relative z-10 flex items-center justify-center lg:justify-end">
             <img
                 src="{{ asset('images/hero-illustration.png') }}"
-                alt="Ilustrasi UKM FT ITC"
+                alt="Ilustrasi UKMFT-ITC"
                 class="w-full max-w-[760px] translate-x-8 object-contain">
         </div>
     </div>

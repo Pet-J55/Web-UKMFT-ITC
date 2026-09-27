@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Divisi Dinamis — UKM FT ITC</title>
+    <title>Card Divisi Dinamis — UKMFT-ITC</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/logo-itc.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -35,50 +36,12 @@
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
             Kembali ke Beranda
         </a>
-        <span class="text-white/60 text-xs font-medium uppercase tracking-widest">Divisi UKM FT ITC</span>
+        <span class="text-white/60 text-xs font-medium uppercase tracking-widest">Divisi UKMFT-ITC</span>
     </div>
 
     @php
-        $data_divisi = $data_divisi ?? [
-            [
-                'nama' => 'LITBANG',
-                'deskripsi' => 'Berfokus pada pengembangan software aplikasi, riset teknologi, dan inovasi digital untuk memberikan solusi teknologi yang berdampak nyata.',
-                'icon' => '</>',
-                'ketua' => [
-                    'nama' => 'SAFRI SAFRU',
-                    'jabatan' => 'Ketua Divisi',
-                    'foto' => 'profile-1.png'
-                ],
-                'anggota' => [
-                    ['nama' => 'SAFRA', 'jabatan' => 'Kadiv', 'foto' => 'profile-1.png'],
-                    ['nama' => 'RINA', 'jabatan' => 'Sekdiv', 'foto' => 'profile-2.png'],
-                    ['nama' => 'ANDI', 'jabatan' => 'Anggota', 'foto' => 'profile-3.png'],
-                    ['nama' => 'BUDI', 'jabatan' => 'Anggota', 'foto' => 'profile-1.png'],
-                    ['nama' => 'CITRA', 'jabatan' => 'Anggota', 'foto' => 'profile-2.png'],
-                    ['nama' => 'DINI', 'jabatan' => 'Anggota', 'foto' => 'profile-3.png'],
-                ]
-            ],
-            [
-                'nama' => 'HUMAS',
-                'deskripsi' => 'Membangun dan memelihara hubungan relasi internal maupun eksternal dengan pihak kampus, alumni, serta mitra kerja sama.',
-                'icon' => '📢',
-                'ketua' => [
-                    'nama' => 'AHMAD FAUZI',
-                    'jabatan' => 'Ketua Divisi',
-                    'foto' => 'profile-2.png'
-                ],
-                'anggota' => [
-                    ['nama' => 'AHMAD', 'jabatan' => 'Kadiv', 'foto' => 'profile-2.png'],
-                    ['nama' => 'BELLA', 'jabatan' => 'Sekdiv', 'foto' => 'profile-3.png'],
-                    ['nama' => 'CHANDRA', 'jabatan' => 'Anggota', 'foto' => 'profile-1.png'],
-                    ['nama' => 'DENI', 'jabatan' => 'Anggota', 'foto' => 'profile-2.png'],
-                    ['nama' => 'EKA', 'jabatan' => 'Anggota', 'foto' => 'profile-3.png'],
-                ]
-            ]
-        ];
-
         $resolvePhoto = function($path) {
-            if (!$path) return asset('assets/images/profile-1.png');
+            if (!$path) return asset('assets/images/profile-1.jpg');
             if (\Illuminate\Support\Str::startsWith($path, ['http://', 'https://', '/'])) {
                 return $path;
             }
@@ -91,7 +54,7 @@
             if (file_exists(public_path('images/' . $path))) {
                 return asset('images/' . $path);
             }
-            return asset('assets/images/profile-1.png');
+            return asset('assets/images/profile-1.jpg');
         };
     @endphp
 
