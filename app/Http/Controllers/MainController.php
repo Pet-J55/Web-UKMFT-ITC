@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Divisi;
 use App\Models\Proker;
+use App\Models\Penugasan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -59,8 +60,16 @@ class MainController extends Controller
         $data_divisi = $this->getDivisiData();
         $proker_data = $this->getProkerData();
 
-        // Kirim $proker_data ke view home (karena file proker.blade di-include ke sini)
-        return view('pages.home', compact('data_divisi', 'proker_data'));
+        $totalPenugasan = Penugasan::count();
+
+        $totalKategori = Penugasan::distinct('kategori')->count('kategori');
+
+        return view('pages.home', compact(
+            'data_divisi',
+            'proker_data',
+            'totalPenugasan',
+            'totalKategori'
+        ));
     }
 
     public function divisi()
@@ -133,20 +142,20 @@ class MainController extends Controller
         ->whereHas('dokumentasi')
         ->get();
 
-        $jumlahDivisi = $proker
+        $jumlahDivisi = Proker::with('divisi')->get()
             ->pluck('divisi_id')
             ->unique()
             ->count();
 
-        $jumlahProker = $proker->count();
+        $jumlahProker = Proker::with('divisi')->get()->count();
 
-        $jumlahKegiatan = $proker
+        $jumlahKegiatan = Proker::with('divisi')->get()
             ->whereNotNull('tanggal_berlangsung')
             ->count();
 
-        $totalPeserta = $proker->sum('peserta');
+        $totalPeserta = Proker::with('divisi')->get()->sum('peserta');
 
-        $jumlahDokumentasi = $proker
+        $jumlahDokumentasi = Proker::with('divisi')->get()
             ->flatMap->dokumentasi
             ->count();
 
@@ -162,7 +171,9 @@ class MainController extends Controller
 
     public function penugasan()
     {
-        return view('pages.penugasan');
+        $penugasanList = Penugasan::latest('tanggal_upload')->get();
+
+        return view('pages.penugasan', compact('penugasanList'));
     }
 
     

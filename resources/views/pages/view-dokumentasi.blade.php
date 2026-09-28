@@ -79,11 +79,11 @@
             {{-- Right: Image --}}
             <div style="flex-shrink: 0; display: flex; align-items: flex-start; justify-content: flex-end; padding-right: 20px; padding-top: 10px;">
 
-                <img src="{{ asset('assets/images/head-proker.png') }}"
+                <img
+                     src="{{ asset('assets/images/profile-1.jpg') }}"
                      onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'"
                      alt="Dokumentasi Kegiatan"
-                     style="width: 235px; height: 157px; object-fit: cover; border-radius: 20px 20px 20px 0; box-shadow: 8px 12px 28px rgba(0, 40, 120, 0.18); display: block;">
-
+                     style="width: 370px; height: 257px; object-fit: cover; border-radius: 20px 20px 20px 0; box-shadow: 8px 12px 28px rgba(0, 40, 120, 0.18); display: block;">
             </div>
 
         </div>
@@ -103,7 +103,7 @@
                     </div>
 
                     <div>
-                        <div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">5</div>
+                        <div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">{{ $jumlahDivisi }}</div>
                         <div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">
                             Divisi<br>Aktif
                         </div>
@@ -121,7 +121,7 @@
                     </div>
 
                     <div>
-                        <div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">20+</div>
+                        <div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">{{ $jumlahProker }}</div>
                         <div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">
                             Program Kerja<br>
                             <span style="font-weight:400;font-size:10px;">Tiap Tahun</span>
@@ -140,7 +140,7 @@
                     </div>
 
                     <div>
-                        <div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">50+</div>
+                        <div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">{{ $jumlahKegiatan }}</div>
                         <div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">
                             Kegiatan<br>
                             <span style="font-weight:400;font-size:10px;">Terlaksana</span>
@@ -159,7 +159,7 @@
                     </div>
 
                     <div>
-                        <div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">100+</div>
+                        <div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">{{ $totalPeserta }}</div>
                         <div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">
                             Anggota<br>
                             <span style="font-weight:400;font-size:10px;">Terlibat</span>
@@ -178,7 +178,7 @@
                     </div>
 
                     <div>
-                        <div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">500+</div>
+                        <div style="font-size:26px;font-weight:900;color:#2563eb;line-height:1;">{{ $jumlahDokumentasi }}</div>
                         <div style="font-size:11px;font-weight:700;color:#1a2744;line-height:1.3;margin-top:3px;">
                             Dokumentasi<br>
                             <span style="font-weight:400;font-size:10px;">Kegiatan</span>

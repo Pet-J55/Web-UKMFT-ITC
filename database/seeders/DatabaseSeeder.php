@@ -631,5 +631,12 @@ class DatabaseSeeder extends Seeder
             'caption' => 'Kompetisi Technotainment',
             'durasi' => null,
         ]);
+
+        // Penugasan::create([
+        //     'file_pdf' => 'penugasan.pdf',
+        //     'deskripsi' => 'Penugasan Barang Infinite terlampir di sini.',
+        //     'tanggal_upload' => '2026-09-28',
+        //     'kategori' => 'Wajib',
+        // ]);
     }
 }

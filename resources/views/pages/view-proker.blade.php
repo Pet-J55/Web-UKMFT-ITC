@@ -48,7 +48,7 @@
                      src="{{ asset('assets/images/profile-1.jpg') }}"
                      onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'"
                      alt="Meeting Proker"
-                     style="width: 235px; height: 157px; object-fit: cover; border-radius: 20px 20px 20px 0; box-shadow: 8px 12px 28px rgba(0, 40, 120, 0.18); display: block;">
+                     style="width: 370px; height: 257px; object-fit: cover; border-radius: 20px 20px 20px 0; box-shadow: 8px 12px 28px rgba(0, 40, 120, 0.18); display: block;">
             </div>
         </div>
 
