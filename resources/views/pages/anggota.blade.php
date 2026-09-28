@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Daftar Anggota — UKM FT ITC')
+@section('title', 'Daftar Anggota — UKMFT-ITC')
 
 @section('content')
     <div class="relative overflow-x-hidden min-h-screen bg-slate-50">
@@ -11,7 +11,7 @@
         <section class="relative min-h-[640px] md:min-h-[720px] flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden text-center bg-slate-900">
             <!-- Background Image -->
             <img 
-                src="{{ asset('assets/images/bacground-header-halaman-anggota.png') }}" 
+                src="{{ asset('assets/images/profile-1.jpg') }}" 
                 alt="Background Header Halaman Anggota" 
                 class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0 opacity-80" 
             />
@@ -24,8 +24,8 @@
                 <!-- Logo Halaman Anggota -->
                 <div class="mb-6 transform hover:scale-105 transition-transform duration-300 flex justify-center">
                     <img 
-                        src="{{ asset('assets/images/logo-halaman-anggota.png') }}" 
-                        alt="Logo UKM FT ITC" 
+                        src="{{ asset('images/logo-itc.png') }}" 
+                        alt="Logo UKMFT-ITC" 
                         class="w-[340px] sm:w-[520px] md:w-[704px] h-auto max-h-[469px] object-contain drop-shadow-[0_15px_35px_rgba(0,0,0,0.6)]" 
                     />
                 </div>
@@ -55,7 +55,7 @@
 
         @php
             $resolvePhoto = function($path) {
-                if (!$path) return asset('assets/images/profile-1.png');
+                if (!$path) return asset('assets/images/profile-1.jpg');
                 if (\Illuminate\Support\Str::startsWith($path, ['http://', 'https://', '/'])) {
                     return $path;
                 }
@@ -68,13 +68,13 @@
                 if (file_exists(public_path('images/' . $path))) {
                     return asset('images/' . $path);
                 }
-                return asset('assets/images/profile-1.png');
+                return asset('assets/images/profile-1.jpg');
             };
 
             $availablePhotos = [
-                asset('assets/images/profile-1.png'),
-                asset('assets/images/profile-2.png'),
-                asset('assets/images/profile-3.png'),
+                asset('assets/images/profile-1.jpg'),
+                asset('assets/images/profile-2.jpg'),
+                asset('assets/images/profile-3.jpg'),
             ];
 
             $formatted_divisi = [];
@@ -197,10 +197,10 @@
             >
                 <!-- ================= SECTION HEADER (IMAGE 1 STYLE) ================= -->
                 <div class="mb-10 text-center flex flex-col items-center">
-                    <!-- Judul Utama "DIVISI UKM FT ITC" -->
+                    <!-- Judul Utama "DIVISI UKMFT-ITC" -->
                     <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4 drop-shadow-md">
                         <span class="text-[#002054]">DIVISI </span>
-                        <span class="bg-gradient-to-r from-[#0256DD] via-[#38bdf8] to-[#0256DD] bg-clip-text text-transparent">UKM FT ITC</span>
+                        <span class="bg-gradient-to-r from-[#0256DD] via-[#38bdf8] to-[#0256DD] bg-clip-text text-transparent">UKMFT-ITC</span>
                     </h2>
 
                     <!-- Deskripsi Subtitle -->

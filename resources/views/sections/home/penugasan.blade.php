@@ -26,7 +26,7 @@
         <!-- Subtitle -->
         <p class="text-blue-100/90 text-sm sm:text-base md:text-lg text-center max-w-2xl mx-auto font-medium leading-relaxed mb-10 md:mb-14">
             Lihat dan selesaikan penugasan yang diberikan.<br class="hidden sm:inline" />
-            Tingkatkan kemampuan, berikan kontribusi terbaik untuk UKM FT ITC
+            Tingkatkan kemampuan, berikan kontribusi terbaik untuk UKMFT-ITC
         </p>
 
         <!-- Stats Card & Button Container Wrapper -->

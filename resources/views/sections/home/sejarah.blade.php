@@ -42,7 +42,7 @@
                 {{-- Maskot --}}
                 <img
                     src="{{ asset('assets/images/sejarah-maskot.png') }}"
-                    alt="Maskot UKM FT ITC"
+                    alt="Maskot UKMFT-ITC"
                     class="absolute left-[-10px] top-[-100px]
                         z-20 w-[620px] max-w-none object-contain
                         drop-shadow-[0_18px_18px_rgba(0,32,84,0.14)]"
@@ -92,7 +92,7 @@
                            leading-[1.34] text-slate-900"
                 >
                     <strong class="font-extrabold text-black">
-                        UKM FT ITC (Information Technology Center)
+                        UKMFT-ITC (Information Technology Center)
                     </strong>
                     merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang
                     menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi,
@@ -115,7 +115,7 @@
                            leading-[1.34] text-slate-900"
                 >
                     <strong class="font-extrabold text-black">
-                        UKM FT ITC (Information Technology Center)
+                        UKMFT-ITC (Information Technology Center)
                     </strong>
                     merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang
                     menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi,
@@ -138,7 +138,7 @@
                            leading-[1.34] text-slate-900"
                 >
                     <strong class="font-extrabold text-black">
-                        UKM FT ITC (Information Technology Center)
+                        UKMFT-ITC (Information Technology Center)
                     </strong>
                     merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang
                     menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi,
@@ -161,7 +161,7 @@
                            leading-[1.34] text-slate-900"
                 >
                     <strong class="font-extrabold text-black">
-                        UKM FT ITC (Information Technology Center)
+                        UKMFT-ITC (Information Technology Center)
                     </strong>
                     merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang
                     menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi,
@@ -185,7 +185,7 @@
 
                 <img
                     src="{{ asset('assets/images/sejarah-maskot.png') }}"
-                    alt="Maskot UKM FT ITC"
+                    alt="Maskot UKMFT-ITC"
                     class="absolute bottom-[-10px] left-1/2
                            w-[250px] max-w-none -translate-x-1/2 object-contain"
                 >
@@ -196,7 +196,7 @@
                     <span class="absolute left-0 top-[8px] h-4 w-4 rounded-full bg-[#0A32C7]"></span>
                     <h3 class="text-[30px] font-extrabold text-[#174591]">2023</h3>
                     <p class="mt-2 text-[15px] leading-[1.45] text-slate-900">
-                        <strong>UKM FT ITC (Information Technology Center)</strong>
+                        <strong>UKMFT-ITC (Information Technology Center)</strong>
                         merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang
                         menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi,
                         dan mengembangkan kemampuan
@@ -207,7 +207,7 @@
                     <span class="absolute left-0 top-[8px] h-4 w-4 rounded-full bg-[#0A32C7]"></span>
                     <h3 class="text-[30px] font-extrabold text-[#174591]">2024</h3>
                     <p class="mt-2 text-[15px] leading-[1.45] text-slate-900">
-                        <strong>UKM FT ITC (Information Technology Center)</strong>
+                        <strong>UKMFT-ITC (Information Technology Center)</strong>
                         merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang
                         menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi,
                         dan mengembangkan kemampuan
@@ -218,7 +218,7 @@
                     <span class="absolute left-0 top-[8px] h-4 w-4 rounded-full bg-[#0A32C7]"></span>
                     <h3 class="text-[30px] font-extrabold text-[#174591]">2025</h3>
                     <p class="mt-2 text-[15px] leading-[1.45] text-slate-900">
-                        <strong>UKM FT ITC (Information Technology Center)</strong>
+                        <strong>UKMFT-ITC (Information Technology Center)</strong>
                         merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang
                         menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi,
                         dan mengembangkan kemampuan
@@ -229,7 +229,7 @@
                     <span class="absolute left-0 top-[8px] h-4 w-4 rounded-full bg-[#0A32C7]"></span>
                     <h3 class="text-[30px] font-extrabold text-[#174591]">2026</h3>
                     <p class="mt-2 text-[15px] leading-[1.45] text-slate-900">
-                        <strong>UKM FT ITC (Information Technology Center)</strong>
+                        <strong>UKMFT-ITC (Information Technology Center)</strong>
                         merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang
                         menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi,
                         dan mengembangkan kemampuan

@@ -12,17 +12,17 @@
 
     <div class="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 pt-8">
         
-        <!-- Kolom 1: Profil (UKM FT ITC) - Balanced Logo & Text -->
+        <!-- Kolom 1: Profil (UKMFT-ITC) - Balanced Logo & Text -->
         <div class="lg:col-span-6 flex flex-col sm:flex-row items-start gap-5 sm:gap-6">
             
             <!-- Logo di sebelah kiri -->
-            <img src="{{ asset('images/logo-itc.png') }}" alt="Logo UKM FT ITC" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain shrink-0 drop-shadow-xl mt-0.5">
+            <img src="{{ asset('images/logo-itc.png') }}" alt="Logo UKMFT-ITC" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain shrink-0 drop-shadow-xl mt-0.5">
 
             <!-- Container Teks & Sosial Media di sebelah kanan Logo -->
             <div class="flex-1 space-y-4">
                 <div>
                     <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-none">
-                        UKM FT ITC
+                        UKMFT-ITC
                     </h3>
                     <p class="text-sm sm:text-base font-bold text-[#00aaff] mt-1.5">
                         Information Technology Center
@@ -30,7 +30,7 @@
                 </div>
                 
                 <p class="text-xs sm:text-sm text-slate-200 font-normal leading-relaxed text-justify sm:text-left max-w-md">
-                    <span class="font-bold text-white">UKM FT ITC (Information Technology Center)</span> merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi, dan mengembangkan kemampuan
+                    <span class="font-bold text-white">UKMFT-ITC (Information Technology Center)</span> merupakan Unit Kegiatan Mahasiswa Fakultas Teknik yang menjadi wadah bagi mahasiswa untuk belajar, berkolaborasi, dan mengembangkan kemampuan
                 </p>
 
                 <!-- Social Media Icons (Clean Icons Aligned Below Description) -->

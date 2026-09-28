@@ -39,8 +39,8 @@
                            bg-white"
                 >
                     <img
-                        src="{{ asset('assets/images/profile-1.png') }}"
-                        alt="Kegiatan kolaborasi anggota UKM FT ITC"
+                        src="{{ asset('assets/images/profile-1.jpg') }}"
+                        alt="Kegiatan kolaborasi anggota UKMFT-ITC"
                         class="h-full w-full object-cover object-center"
                     >
                 </div>
@@ -63,8 +63,8 @@
                            bg-white"
                 >
                     <img
-                        src="{{ asset('assets/images/profile-3.png') }}"
-                        alt="Kegiatan diskusi anggota UKM FT ITC"
+                        src="{{ asset('assets/images/profile-3.jpg') }}"
+                        alt="Kegiatan diskusi anggota UKMFT-ITC"
                         class="h-full w-full object-cover object-center"
                     >
                 </div>
@@ -87,13 +87,12 @@
                            bg-white"
                 >
                     <img
-                        src="{{ asset('assets/images/profile-2.png') }}"
-                        alt="Kegiatan belajar anggota UKM FT ITC"
+                        src="{{ asset('assets/images/profile-2.jpg') }}"
+                        alt="Kegiatan belajar anggota UKMFT-ITC"
                         class="absolute left-1/2 top-1/2
-                               h-[45%] w-[61%] max-w-none
-                               -translate-x-1/2 -translate-y-1/2
-                               rotate-90 scale-[1.65]
-                               object-cover object-center"
+                                h-full w-full
+                                -translate-x-1/2 -translate-y-1/2
+                                object-cover object-center"
                     >
                 </div>
             </div>
@@ -125,7 +124,7 @@
                                    from-[#174591] to-[#6fa6ff]
                                    bg-clip-text text-transparent"
                         >
-                            UKM FT ITC
+                            UKMFT-ITC
                         </span>
                     </h2>
 
@@ -137,7 +136,7 @@
                     >
                         <p>
                             <strong class="font-extrabold text-black">
-                                UKM FT ITC (Information Technology Center)
+                                UKMFT-ITC (Information Technology Center)
                             </strong>
 
                             merupakan Unit Kegiatan Mahasiswa Fakultas Teknik
@@ -154,7 +153,7 @@
                             profesionalisme,
 
                             <strong class="font-extrabold text-black">
-                                UKM FT ITC
+                                UKMFT-ITC
                             </strong>
 
                             berkomitmen menciptakan lingkungan yang mendukung

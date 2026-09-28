@@ -14,7 +14,7 @@
         >
             <img
                 src="{{ asset('images/logo-itc.png') }}"
-                alt="Logo UKM FT ITC"
+                alt="Logo UKMFT-ITC"
                 class="h-9 w-9 object-contain"
             >
         </a>
@@ -26,21 +26,21 @@
                    text-[16px] font-semibold text-white md:flex"
         >
             <a
-                href="#beranda"
+                href="/#beranda"
                 class="transition-colors hover:text-cyan-200"
             >
                 Beranda
             </a>
 
             <a
-                href="#deskripsi"
+                href="/#deskripsi"
                 class="transition-colors hover:text-cyan-200"
             >
                 Deskripsi
             </a>
 
             <a
-                href="#divisi"
+                href="/#divisi"
                 class="transition-colors hover:text-cyan-200"
             >
                 Divisi
@@ -54,7 +54,7 @@
             </a>
 
             <a
-                href="#kontak"
+                href="/#kontak"
                 class="transition-colors hover:text-cyan-200"
             >
                 Kontak
@@ -94,11 +94,11 @@
         data-mobile-menu
     >
         <div class="flex flex-col gap-4 text-sm font-semibold text-slate-700">
-            <a href="#beranda">Beranda</a>
-            <a href="#deskripsi">Deskripsi</a>
-            <a href="#divisi">Divisi</a>
+            <a href="/#beranda">Beranda</a>
+            <a href="/#deskripsi">Deskripsi</a>
+            <a href="/#divisi">Divisi</a>
             <a href="{{ route('proker') }}">Kegiatan</a>
-            <a href="#kontak">Kontak</a>
+            <a href="/#kontak">Kontak</a>
         </div>
     </div>
 </header>
