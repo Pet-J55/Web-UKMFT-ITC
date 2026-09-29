@@ -73,13 +73,13 @@
 
             <div class="mt-12 flex flex-wrap gap-7">
                 <x-stat-card
-                    value="20+"
+                    value="50+"
                     label="Anggota Aktif"
                     icon="users"
                 />
 
                 <x-stat-card
-                    value="10+"
+                    value="30+"
                     label="Kegiatan"
                     icon="calendar"
                 />
