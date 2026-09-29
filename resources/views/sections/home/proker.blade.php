@@ -206,7 +206,7 @@
                                     <div class="mt-auto">
 
                                         <a
-                                            href="#"
+                                            href="{{ route('detail-proker', $card->id) }}"
                                             class="inline-block bg-gradient-to-r from-[#002054] to-[#0256DD] text-white text-[13px] font-bold px-6 py-2.5 rounded-full shadow-sm hover:opacity-90 transition"
                                         >
                                             Selengkapnya

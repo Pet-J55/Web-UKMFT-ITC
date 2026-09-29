@@ -350,7 +350,7 @@
 
                         <!-- Button -->
                         <a
-                            href="#proker-{{ $slugDivisi }}"
+                            href="{{ url('/view-proker') }}"
                             class="z-10 bg-transparent border-[1.5px] border-white/50 hover:bg-white/10 hover:border-white text-white text-[11px] font-bold px-4 py-1.5 rounded-full flex items-center gap-1.5 transition-all">
 
                             Lihat Proker
@@ -586,7 +586,7 @@
                                         <!-- CTA -->
                                         <div class="mt-auto">
                                             <a
-                                                href="#"
+                                                href="{{ route('detail-proker', $proker->id) }}"
                                                 class="inline-block bg-gradient-to-r from-[#002054] to-[#0256DD] text-white text-[13px] font-bold px-6 py-2.5 rounded-full shadow-sm hover:opacity-90 transition">
                                                 Selengkapnya
                                             </a>
@@ -610,7 +610,7 @@
                     class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 mt-10">
                     <div class="flex justify-center">
                         <a
-                            href="#"
+                            href="{{ url('/view-proker') }}"
                             class="bg-[#0256DD] text-white px-9 py-3 rounded-full font-extrabold text-[15px] flex items-center gap-2.5 shadow-md hover:shadow-lg transition hover:bg-[#003891]">
                             Lihat Semua Program
                         </a>
@@ -684,7 +684,7 @@
 
                         <!-- Button -->
                         <a
-                            href="#proker-{{ Str::slug($namaDivisi) }}"
+                            href="{{ url('/view-dokumentasi') }}"
                             class="w-max mx-auto px-8 bg-[#003891] hover:bg-[#002B73] text-white text-[12px] font-extrabold py-2 rounded-full text-center transition-colors shadow-md mt-auto mb-1">
                             Lihat Semua
                         </a>
